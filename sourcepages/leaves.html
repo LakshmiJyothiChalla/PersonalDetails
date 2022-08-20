@@ -6,8 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
+      <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <title>Dashboard Page</title>
@@ -35,7 +34,6 @@
     <nav class="fixed-top align-top" id="sidebar-wrapper" role="navigation">
        <div class="simplebar-content" style="padding: 0px;">
         <a class="sidebar-brand" href="index.html">
-     
         </a>
          <ul class="navbar-nav align-self-stretch">
                     <li  href="#" class="sidebar-header">
@@ -53,19 +51,18 @@
 														<div class="submenu-box"> 
 															<ul class="list-unstyled m-0">
 																<li><a href="PersonalDetails.html">Personal Details</a></li>
-																<li><a href="">Emergency Details</a></li>
+																<li><a href="EmergencyDetails.html">Emergency Details</a></li>
 																<li><a href=""> Family Details</a></li>
 															</ul>
 														</div>
 													</div>
-													
 												</div>
 											</div>
 								 </div>
 							  </div>
-				  </li>
+							  </li>
                   <li class=""> 
-                  <a class="nav-link text-left" href="workexperience.html"   role="button" >
+                  <a class="nav-link text-left" href="WorkExperience.html"   role="button" >
                    <i class="flaticon-bar-chart-1 fa-solid fa-upload"></i> Work Experience 
                      </a>
                   </li>
@@ -75,7 +72,7 @@
                        </a>
                    </li>
                   <li class=""> 
-                    <a class="nav-link text-left" href="#"   role="button" >
+                    <a class="nav-link text-left" href="leaves.html"   role="button" >
                      <i class="flaticon-bar-chart-1 fa-solid fa-video"></i>  Leaves 
                        </a>
                   </li>
@@ -131,20 +128,83 @@
     </div>
     </div>
 <!-- End of Navbar section-->
-
-
     <div>
         <div class="center mt-5">This is Leaves Page
         </div>
     </div>
+   
+  
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<div class="row my-5 align-items-center justify-content-center">
+		<div class="col-10 col-lg-10 col-xl-3">
+			<div class="card " style="width:450px">
+			  <div class="card-body">
+					<form onsubmit="event.preventDefault()" autocomplete="off">
+						<div class="row">
+							<label class="col-6 mt-2 ">Purpose of leave</label>
+							<input type="text" class="col-6" name="leavepurpose" id="leavepurpose">
+						</div>
+						<div class="row">
+							<label class="col-6 mt-2">Start Date</label>
+							<input type="date"  class="col-6 mt-2"name="startdate" id="startdate">
+						</div>
+						<div class="row">
+							<label class="col-6 mt-2">EndDate</label>
+							<input type="date"  class="col-6 mt-2" name="EndDate" id="EndDate" onchange="experiencecount()" >
+						</div>
+						<div class="row">
+							  <label for="validationServer04" class="form-label col-6 mt-2">Type-of-Leave 
+							  </label>
+							  <div class="col-6 mt-2">
+								  <select class="form-select" id="typeofleave" name="typeofleave" required>
+									<option selected disabled value="">Choose LeaveType</option>
+									<option>Sick Leave</option>
+									<option>Public Holiday</option>
+									<option>Maternal Leave</option>
+									<option>Emergency Leave</option>
+								  </select>
+							  </div>
+						 </div> 
+						<div  class="row">
+							<label class="col-6 mt-2">Status</label>
+							<input type="text"  class="col-6 mt-2" name="status" id="status">
+						</div>
+						<div  class="form-action-buttons text-center mt-2 primary">
+							<input type="submit" value="Submit" class="btn-primary" onclick="AddRow()">
+						</div>
+					</form>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	
+		<center>
+			<div class="justify-content-center align-items-center table-responsive">
+				<table border="2" id="WorkExperience" class="table border-primary caption-top table-bordered w-50">
+					<caption>List of Companies worked</caption>
+					<thead>
+						<tr>
+							<th>Purpose of Leave</th>
+							<th>Start Date</th>
+							<th>End Date</th>
+							<th>Type of Leave</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</center>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> 
+  <script>
   
  <script>
  
@@ -153,6 +213,44 @@ $('#bar').click(function(){
   $('#page-content-wrapper ,#sidebar-wrapper').toggleClass('toggled' );
 
 });
+  </script>
+  <script>
+
+    var list1 = [];
+    var list2 = [];
+    var list3 = [];
+    var list4 = [];
+    var list5 = [];
+
+    var n = 1;
+    var x = 0;
+
+    function AddRow(){
+
+      var AddRown = document.getElementById('WorkExperience');
+      var NewRow = AddRown.insertRow(n);
+
+      list1[x] = document.getElementById("leavepurpose").value;
+      list2[x] = document.getElementById("startdate").value;
+      list3[x] = document.getElementById("EndDate").value;
+      list4[x] = document.getElementById("typeofleave").value;
+      list5[x] = document.getElementById("status").value;
+      
+      var cel1 = NewRow.insertCell(0);
+      var cel2 = NewRow.insertCell(1);
+      var cel3 = NewRow.insertCell(2);
+      var cel4 = NewRow.insertCell(3);
+      var cel5 = NewRow.insertCell(4);
+
+      cel1.innerHTML = list1[x];
+      cel2.innerHTML = list2[x];
+      cel3.innerHTML = list3[x];
+      cel4.innerHTML = list4[x];
+      cel5.innerHTML = list5[x];
+      
+      n++;
+      x++;
+    }
   </script>
  </body>
 </html>
