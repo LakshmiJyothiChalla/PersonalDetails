@@ -18,7 +18,7 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     
      <link rel="stylesheet" href="font/font/flaticon.css">
-     <link rel="stylesheet" href="../style.css">
+     <link rel="stylesheet" href="style.css">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -29,64 +29,60 @@
   
   <body>
   
-  <div id="wrapper">
-   <div class="overlay"></div>
-        <!-- Sidebar -->
     <nav class="fixed-top align-top" id="sidebar-wrapper" role="navigation">
        <div class="simplebar-content" style="padding: 0px;">
         <a class="sidebar-brand" href="index.html">
-     
         </a>
          <ul class="navbar-nav align-self-stretch">
                     <li  href="#" class="sidebar-header">
-                      Dashboard
+                     Dashboard
                     </li>
                     <li class="has-sub"> 
-							  <a class="nav-link collapsed text-left" href="#collapseExample2" role="button" data-toggle="collapse" >
-							<i class="flaticon-user"></i>   Profile
-							 </a>
-							  <div class="collapse menu mega-dropdown" id="collapseExample2">
-							<div class="dropmenu" aria-labelledby="navbarDropdown">
-							<div class="container-fluid ">
-												<div class="row">
-													<div class="col-lg-12 px-2">
-														<div class="submenu-box"> 
-															<ul class="list-unstyled m-0">
-																<li><a href="PersonalDetails.html">Personal Details</a></li>
-																<li><a href="">Emergency Details</a></li>
-																<li><a href=""> Family Details</a></li>
-															</ul>
-														</div>
-													</div>
-													
-												</div>
-											</div>
-								 </div>
-							  </div>
-							  </li>
+                <a class="nav-link collapsed text-left" href="#collapseExample2" role="button" data-toggle="collapse" >
+              <i class="flaticon-user me-2"></i>Profile
+               </a>
+                <div class="collapse menu mega-dropdown" id="collapseExample2">
+              <div class="dropmenu" aria-labelledby="navbarDropdown">
+              <div class="container-fluid ">
+                        <div class="row">
+                          <div class="col-lg-12 px-2">
+                            <div class="submenu-box"> 
+                              <ul class="list-unstyled m-0">
+                                <li><a href="PersonalDetails.html">Personal Details</a></li>
+                                <li><a href="EmergencyDetails.html">Emergency Details</a></li>
+                                <li><a href="FamilyDetails.html"> Family Details</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                 </div>
+                </div>
+                </li>
                   <li class=""> 
-                  <a class="nav-link text-left" href="workexperience.html"   role="button" >
-                   <i class="flaticon-bar-chart-1 fa-solid fa-upload"></i> Work Experience 
+                  <a class="nav-link text-left" href="WorkExperienceDetails.html"   role="button" >
+                   <i class="flaticon-bar-chart-1 fa-solid fa-upload me-2"></i>Work Experience 
                      </a>
                   </li>
                    <li class=""> 
                     <a class="nav-link text-left " href="tasks.html"   role="button" >
-                     <i class="flaticon-bar-chart-1 fa-solid fa-user"></i> Tasks 
+                     <i class="flaticon-bar-chart-1 fa-solid fa-user me-2"></i>Tasks
                        </a>
                    </li>
                   <li class=""> 
                     <a class="nav-link text-left" href="leaves.html"   role="button" >
-                     <i class="flaticon-bar-chart-1 fa-solid fa-video"></i>  Leaves 
+                     <i class="flaticon-bar-chart-1 fa-solid fa-video me-2"></i>  Leaves
                        </a>
                   </li>
                   <li class=""> 
-                    <a class="nav-link text-left" href="#" role="button" >
-                     <i class="flaticon-bar-chart-1  fa-solid fa-upload"></i>  BankDetails 
+                    <a class="nav-link text-left" href="bankdetails.html" role="button" >
+                     <i class="flaticon-bar-chart-1  fa-solid fa-upload me-2"></i>BankDetails 
                        </a>
                   </li>
                   <li class=""> 
-                  <a class="nav-link text-left" href="#"   role="button" >
-                   <i class="flaticon-bar-chart-1 fa-solid fa-user"></i>  Logout 
+                  <a class="nav-link text-left" href="Logout.html"   role="button" >
+                   <i class="flaticon-bar-chart-1 fa-solid fa-user me-2"></i> Logout
                      </a>
                   </li>
        </ul>
@@ -105,26 +101,38 @@
           <span></span>
          <span></span>
             </div>
-          <!-- Topbar Search -->
+          <a class="navbar-brand mb-2" href="#">
+			  <img src="img/logo3.PNG" alt="" width="30" height="24">
+			</a>
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown  d-sm-none">
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small"
-          placeholder="Search for..." >
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                <span class="text-gray-600">Home</span>
+              </a>
             </li>
+			  <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                <span class="text-gray-600">About Us</span>
+              </a>
+            </li>
+			  <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                <span class="text-gray-600">Menu</span>
+              </a>
+            </li>
+			<div class="collapse navbar-collapse justify-content-end ml-auto" id="collapsibleNavbar">
+			  <ul class="navbar-nav">
+				<li>
+				  <button  type="button" class="btn btn-primary ml-auto me-5" data-bs-target="#register">Login</button>
+				</li>
+			  </ul>
+			</div>
+			
+
           </ul>
+
         </nav>
       </div>
         </div>
@@ -134,7 +142,7 @@
 
 
     <div>
-        <div class="center mt-5">This is BankDetails Page
+        <div class="center mt-5">This is Dashboard Page
         </div>
     </div>
 

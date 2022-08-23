@@ -29,54 +29,58 @@
   
   <body>
   
+  <div id="wrapper">
+   <div class="overlay"></div>
+        <!-- Sidebar -->
     <nav class="fixed-top align-top" id="sidebar-wrapper" role="navigation">
        <div class="simplebar-content" style="padding: 0px;">
         <a class="sidebar-brand" href="index.html">
+     
         </a>
          <ul class="navbar-nav align-self-stretch">
                     <li  href="#" class="sidebar-header">
                       Dashboard
                     </li>
                     <li class="has-sub"> 
-                <a class="nav-link collapsed text-left" href="#collapseExample2" role="button" data-toggle="collapse" >
-              <i class="flaticon-user"></i>   Profile
-               </a>
-                <div class="collapse menu mega-dropdown" id="collapseExample2">
-              <div class="dropmenu" aria-labelledby="navbarDropdown">
-              <div class="container-fluid ">
-                        <div class="row">
-                          <div class="col-lg-12 px-2">
-                            <div class="submenu-box"> 
-                              <ul class="list-unstyled m-0">
-                                <li><a href="sourcepages/PersonalDetails.html">Personal Details</a></li>
-                                <li><a href="sourcepages/EmergencyDetails.html">Emergency Details</a></li>
-                                <li><a href="sourcepages/FamilyDetails.html"> Family Details</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                          
-                        </div>
-                      </div>
-                 </div>
-                </div>
-                </li>
+							  <a class="nav-link collapsed text-left" href="#collapseExample2" role="button" data-toggle="collapse" >
+							<i class="flaticon-user"></i>   Profile
+							 </a>
+							  <div class="collapse menu mega-dropdown" id="collapseExample2">
+							<div class="dropmenu" aria-labelledby="navbarDropdown">
+							<div class="container-fluid ">
+												<div class="row">
+													<div class="col-lg-12 px-2">
+														<div class="submenu-box"> 
+															<ul class="list-unstyled m-0">
+																<li><a href="PersonalDetails.html">Personal Details</a></li>
+																<li><a href="">Emergency Details</a></li>
+																<li><a href=""> Family Details</a></li>
+															</ul>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+								 </div>
+							  </div>
+							  </li>
                   <li class=""> 
-                  <a class="nav-link text-left" href="sourcepages/WorkExperienceDetails.html"   role="button" >
+                  <a class="nav-link text-left" href="workexperience.html"   role="button" >
                    <i class="flaticon-bar-chart-1 fa-solid fa-upload"></i> Work Experience 
                      </a>
                   </li>
                    <li class=""> 
-                    <a class="nav-link text-left " href="sourcepages/tasks.html"   role="button" >
+                    <a class="nav-link text-left " href="tasks.html"   role="button" >
                      <i class="flaticon-bar-chart-1 fa-solid fa-user"></i> Tasks 
                        </a>
                    </li>
                   <li class=""> 
-                    <a class="nav-link text-left" href="sourcepages/leaves.html"   role="button" >
+                    <a class="nav-link text-left" href="leaves.html"   role="button" >
                      <i class="flaticon-bar-chart-1 fa-solid fa-video"></i>  Leaves 
                        </a>
                   </li>
                   <li class=""> 
-                    <a class="nav-link text-left" href="sourcepages/bankdetails.html" role="button" >
+                    <a class="nav-link text-left" href="#" role="button" >
                      <i class="flaticon-bar-chart-1  fa-solid fa-upload"></i>  BankDetails 
                        </a>
                   </li>
@@ -101,38 +105,26 @@
           <span></span>
          <span></span>
             </div>
-          <a class="navbar-brand mb-2" href="#">
-			  <img src="img/logo3.PNG" alt="" width="30" height="24">
-			</a>
+          <!-- Topbar Search -->
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
-            <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" id="userDropdown" role="button" data-toggle="dropdown">
-                <span class="text-gray-600">Home</span>
-              </a>
+            <li class="nav-item dropdown  d-sm-none">
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small"
+          placeholder="Search for..." >
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </li>
-			  <li class="nav-item dropdown">
-              <a class="nav-link" href="#" id="userDropdown" role="button" data-toggle="dropdown">
-                <span class="text-gray-600">About Us</span>
-              </a>
-            </li>
-			  <li class="nav-item dropdown">
-              <a class="nav-link" href="#" id="userDropdown" role="button" data-toggle="dropdown">
-                <span class="text-gray-600">Menu</span>
-              </a>
-            </li>
-			<div class="collapse navbar-collapse justify-content-end ml-auto" id="collapsibleNavbar">
-			  <ul class="navbar-nav">
-				<li>
-				  <button  type="button" class="btn btn-primary ml-auto me-5" data-bs-target="#register">Login</button>
-				</li>
-			  </ul>
-			</div>
-			
-
           </ul>
-
         </nav>
       </div>
         </div>
@@ -142,9 +134,38 @@
 
 
     <div>
-        <div class="center mt-5">This is Dashboard Page
-        </div>
+        <div class="center mt-5"><h3>This is BankDetails Page</h3>
+		</div>
     </div>
+	<div class="row my-5 align-items-center justify-content-center">
+		<div class="col-10 col-lg-10 col-xl-3">
+			<div class="card" style="width:450px">
+			  <div class="card-body">
+					<form onsubmit="event.preventDefault()" autocomplete="off">
+						<div class="row">
+							<label class="col-6 mt-2 ">Name of the Bank</label>
+							<input type="text" class="col-6 mt-2" name="Name of the Bank" id="Name of the Bank">
+						</div>
+						<div class="row">
+							<label class="col-6 mt-2">Account Number</label>
+							<input type="text"  class="col-6 mt-2"name="Account Number" id="Account Number">
+						</div>
+						<div class="row">
+							<label class="col-6 mt-2">IFSC code</label>
+							<input type="text"  class="col-6 mt-2" name="IFSC code" id="IFSC code">
+						</div>
+						<div  class="row">
+							<label class="col-6 mt-2">Branch Name</label>
+							<input type="text"  class="col-6 mt-2" name="Branch Nam" id="Branch Nam">
+						</div>
+						<div  class="form-action-buttons text-right mt-2">
+							<input type="submit"class="btn btn-primary" value="Submit" onclick="AddRow()">
+						</div>
+					</form>
+			  </div>
+			</div>
+		</div>
+	</div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
